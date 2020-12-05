@@ -3,7 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using FFImageLoading.Forms.Droid;
+using FFImageLoading.Forms.Platform;
 using FormsToolkit;
 using Xamarin.Netflix.ViewModels.Base;
 
@@ -24,7 +24,7 @@ namespace Xamarin.Netflix.Droid
 
             base.OnCreate(bundle);
 
-            CachedImageRenderer.Init();
+            CachedImageRenderer.Init(true);
             Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
